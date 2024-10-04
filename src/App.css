@@ -1,42 +1,136 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body,html{
+  height: 100%;
+background-color: black;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+header{
+  width: 100vw;
+  background-color: rgb(25, 28, 49);
+  border-bottom: 1px white solid;
+  padding: 1rem;
+}
+
+footer{
+  width: 100vw;
+text-align: center;
+  margin-top: auto;
+  background-color: rgb(25, 28, 49);
+  padding: 1rem;
+  border-top: 1px solid white;
+}
+
+.header-title{
+  color: white;
+  font-size: 2rem;
+  line-height: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+main{
+  flex: 1;
+  margin: 1rem auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  margin-right:2rem ;
+  text-decoration: none;
+}
+
+input[type="text"] {
+color: black;
+background-color: white;
+  padding: 10px;          /* Adds space inside the input */
+  margin-top: 10px;       /* Adds space between the label and input */
+  border: 2px solid white; /* Adds a border around the input */
+  border-radius: 5px;     /* Rounds the corners of the input */
+  font-size: 16px;        /* Sets the font size inside the input */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+  outline: none;          /* Removes the default focus outline */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover/focus effects */
+}
+
+/* Hover effect when the user hovers over the input */
+input[type="text"]:hover {
+  border-color: #0056b3;  /* Changes the border color on hover */
+}
+
+/* Focus effect when the input is active (clicked) */
+input[type="text"]:focus {
+  border-color: #0056b3;  /* Changes the border color when focused */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Adds a stronger shadow when focused */
+}
+
+/* Style for the placeholder text */
+input[type="text"]::placeholder {
+  color: black; 
+  opacity: 0.7;           /* Changes the color of the placeholder text */
+  font-style: italic;     /* Makes the placeholder text italic */
+}
+
+.nav-link{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.6s ease, color 0.3s ease;
+}
+.nav-link:hover{
+  background-color:darkcyan;
+  color: white;
   }
-  to {
-    transform: rotate(360deg);
+
+  .active{
+    background-color:darkcyan;
+  color: white;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  article{
+    color: white;
+    margin: 2rem auto;
+    background-color: #2f3e46;
+    padding: 2rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  article h2,p{
+    margin: 6px auto;
+   }
+   article{
+    transition: background-color 1s ease, transform 1s ease;  
+    box-shadow: 10px 10px 25px #0a0f3d;   }
+article:hover{
+   
+    background-color: #0a0f3d;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
