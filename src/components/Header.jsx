@@ -1,15 +1,18 @@
-import React from "react";
+import React,{useState,useContext} from "react";
 import { Nav } from "./nav";
-
-export const Header=({search,setSearch})=>{
+import BlogContext from "../contexts/Blogcontext";
+import useWindowsize from "../hooks/windowsize";
+export const Header=()=>{
+    const {search,setSearch}=useContext(BlogContext);
+    const width=useWindowsize();
     return(
         
         <header>
           
            <div className="header-nav">
-            <form>
+            <form >
                 <input type="text" autoFocus placeholder="search blog here" onChange={(evt)=>setSearch(evt.target.value)} value={search}></input> </form>
-                <h3 className="header-title"> React JS Blog</h3>
+                <h3 className="header-title"> React JS Blog width={width} </h3>
                 <Nav/>
            </div>
         </header>

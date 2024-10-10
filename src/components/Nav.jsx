@@ -5,7 +5,7 @@ export const Nav=()=>{
         <nav>
             <ul>
                 <li><NavLink to='/' exact='true' className={({isActive})=>(isActive?"nav-link active":"nav-link")} >Home</NavLink></li>
-                <li><NavLink to='/Post' className={({isActive})=>(isActive?"nav-link active":"nav-link")}>Post</NavLink></li>
+                <li><NavLink to='/Newpost' className={({isActive})=>(isActive?"nav-link active":"nav-link")}>Post</NavLink></li>
                
                 <li><NavLink to='/About' className={({isActive})=>(isActive?"nav-link active":"nav-link")} >About</NavLink></li>
             </ul>

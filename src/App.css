@@ -53,7 +53,17 @@ main{
   align-items: center;
   margin-left: 2rem;
 }
+@media only screen and (max-width: 795px) {
+  .header-nav input,li{
+    margin: 2rem 0px 0px 0px;
+      }
+}
 
+@media only screen and (max-width: 484px) {
+  .header-nav input,li,h3{
+    margin: 2rem 0px 0px 0px;
+      }
+}
 nav ul{
   display: flex;
   list-style-type: none;
@@ -115,22 +125,114 @@ input[type="text"]::placeholder {
   color: white;
   }
 
-  article{
+  .article{
     color: white;
-    margin: 2rem auto;
+    margin: 2rem 2rem;
     background-color: #2f3e46;
     padding: 2rem;
   }
 
-  article h2,p{
+  .article h2,p{
     margin: 6px auto;
    }
-   article{
+   .article{
     transition: background-color 1s ease, transform 1s ease;  
     box-shadow: 10px 10px 25px #0a0f3d;   }
-article:hover{
+.article:hover{
    
     background-color: #0a0f3d;
     cursor: pointer;
     transform: scale(1.1);
   }
+
+  .feed{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .postpage{
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 70%;
+    background-color: #0a0f3d;
+  }
+.postpage h2,p{
+  margin: 2rem 0px;
+}
+
+.postpage button{
+  background-color: red;
+  border: none;
+  outline: hidden;
+  border-radius: 0.5rem;
+}
+.postpage button:hover{
+  background-color: rgb(142, 8, 8);
+}
+
+.newpost{
+  
+  width: 100%;
+  padding: 2rem;
+
+}
+
+/* Form styling */
+.form {
+  margin: 0px auto;
+  background-color: #1a1a1a; /* Dark gray background for form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow to the form */
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Input and textarea styling */
+.form input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #444; /* Darker border */
+  border-radius: 5px;
+  background-color: #2b2b2b; /* Dark input background */
+  color: #fff; /* White text */
+  font-size: 16px;
+}
+
+.form input::placeholder, textarea::placeholder {
+  color: #999; /* Light gray placeholder text */
+}
+
+/* Button styling */
+.form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50; /* Green background for the button */
+  border: none;
+  border-radius: 5px;
+  color: white; /* White text */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.form button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Input focus styling */
+.form input:focus, textarea:focus {
+  outline: none;
+  border-color: #555; /* Slightly lighter border on focus */
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+

@@ -1,19 +1,18 @@
-import React, { useState } from "react";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import React, { useState,useContext } from "react";
+import BlogContext from "../contexts/Blogcontext";
 import { Feed } from "./Feed";
-export const Home=({data,search,setSearch})=>{
-
-
-
+import Timer from "./DemouseRef";
+export const Home=()=>{
+const {loading}=useContext(BlogContext);
     return(
-       <div className="container">
-
-<Header search={search} setSearch={setSearch}/>
+     
+<>
+<Timer/>
 <main>
-<Feed data={data}/>
+    {loading && <p>loading....</p>}
+
+{!loading && <Feed/>}
 </main>
-<Footer/>
-       </div>
+</> 
     )
 }
