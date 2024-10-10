@@ -4,14 +4,18 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import BlogProvider from './contexts/BlogProvider.jsx'
+import { StoreProvider } from 'easy-peasy';
+import store from './components/easy-peasy/store.js'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <StoreProvider store={store}>
      <BrowserRouter>
-    <BlogProvider>
+   
    
   <App/>
   
-    </BlogProvider>
+    
     </BrowserRouter>
+  </StoreProvider>
   </StrictMode>
 )

@@ -1,8 +1,6 @@
 import React,{useState,useEffect} from 'react';
-import { format } from 'date-fns';
-import BlogProvider from './contexts/BlogProvider';
+
 import './App.css'
-import axios from 'axios'
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Nav } from './components/nav'
@@ -18,9 +16,6 @@ import { Editpost } from './components/Editpost';
 
 const App=()=> {
   let navigate=useNavigate();
-
-  
-
 
 return(
 
